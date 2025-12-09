@@ -3,6 +3,8 @@ package hu.gde.futlas.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -17,4 +19,7 @@ public class Race {
 
     private String name;
     private double distanceKm;
+
+    @OneToMany(mappedBy = "race")
+    private List<Result> results;
 }

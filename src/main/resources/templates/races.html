@@ -23,7 +23,9 @@
 
     <tr th:each="race : ${races}">
         <td th:text="${race.id}"></td>
-        <td th:text="${race.name}"></td>
+        <td>
+            <a th:href="@{/races/{id}(id=${race.id})}" th:text="${race.name}"></a>
+        </td>
         <td th:text="${race.distanceKm}"></td>
     </tr>
 </table>

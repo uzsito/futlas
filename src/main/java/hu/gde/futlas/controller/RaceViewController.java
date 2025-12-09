@@ -34,4 +34,19 @@ public class RaceViewController {
         raceRepository.save(race);
         return "redirect:/races";
     }
+
+    @GetMapping("/races/{id}")
+    public String raceDetails(@org.springframework.web.bind.annotation.PathVariable Long id, Model model) {
+        var race = raceRepository.findById(id).orElse(null);
+        if (race == null) {
+            return "redirect:/races";
+        }
+
+        var results = race.getResults(); // ha nincs getter, írunk egyet Race-ben
+
+        model.addAttribute("race", race);
+        model.addAttribute("results", results);
+
+        return "race-details";
+    }
 }
