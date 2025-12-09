@@ -1,0 +1,8 @@
+POST http://localhost:8080/addResult
+Content-Type: application/json
+
+{
+  "runnerId": 1,
+  "raceId": 1,
+  "timeMinutes": 30
+}
