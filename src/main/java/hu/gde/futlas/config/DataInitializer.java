@@ -29,7 +29,6 @@ public class DataInitializer {
             Race race2 = raceRepo.save(Race.builder()
                     .name("Hegyi 10K").distanceKm(10.0).build());
 
-            // minimum 6 eredmény
             resultRepo.save(Result.builder().runner(r1).race(race1).timeMinutes(24).build());
             resultRepo.save(Result.builder().runner(r2).race(race1).timeMinutes(22).build());
             resultRepo.save(Result.builder().runner(r3).race(race1).timeMinutes(27).build());
