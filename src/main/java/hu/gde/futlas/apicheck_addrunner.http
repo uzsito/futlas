@@ -1,0 +1,8 @@
+POST http://localhost:8080/addRunner
+Content-Type: application/json
+
+{
+  "name": "Boromir",
+  "age": 41,
+  "gender": "M"
+}

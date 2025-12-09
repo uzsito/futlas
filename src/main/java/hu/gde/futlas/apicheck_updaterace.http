@@ -1,0 +1,8 @@
+POST http://localhost:8080/updateRace
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Midtown 5K",
+  "distanceKm": 5.2
+}
