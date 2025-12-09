@@ -1,9 +1,12 @@
 package hu.gde.futlas.controller;
 
+import hu.gde.futlas.model.Race;
 import hu.gde.futlas.repository.RaceRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class RaceViewController {
@@ -18,5 +21,17 @@ public class RaceViewController {
     public String listRaces(Model model) {
         model.addAttribute("races", raceRepository.findAll());
         return "races";
+    }
+
+    @GetMapping("/races/new")
+    public String newRaceForm(Model model) {
+        model.addAttribute("race", new Race());
+        return "race-form";
+    }
+
+    @PostMapping("/races/new")
+    public String createRace(@ModelAttribute Race race) {
+        raceRepository.save(race);
+        return "redirect:/races";
     }
 }
