@@ -1,6 +1,8 @@
 package hu.gde.futlas.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 import lombok.*;
 
 import java.util.List;
@@ -17,7 +19,10 @@ public class Race {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "A név nem lehet üres.")
     private String name;
+
+    @Positive(message = "A távnak pozitív számnak kell lennie.")
     private double distanceKm;
 
     @OneToMany(mappedBy = "race")
