@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Versenyek</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+<h1>Versenyek listája</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Név</th>
+        <th>Táv (km)</th>
+    </tr>
+
+    <tr th:each="race : ${races}">
+        <td th:text="${race.id}"></td>
+        <td th:text="${race.name}"></td>
+        <td th:text="${race.distanceKm}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
