@@ -5,7 +5,7 @@
     <title>Új verseny létrehozása</title>
 </head>
 <body>
-
+<div th:replace="fragments :: menu"></div>
 <h1>Új verseny létrehozása</h1>
 
 <form th:action="@{/races/new}" th:object="${race}" method="post">

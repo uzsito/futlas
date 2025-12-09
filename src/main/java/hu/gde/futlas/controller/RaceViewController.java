@@ -17,6 +17,11 @@ public class RaceViewController {
         this.raceRepository = raceRepository;
     }
 
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/races")
     public String listRaces(Model model) {
         model.addAttribute("races", raceRepository.findAll());

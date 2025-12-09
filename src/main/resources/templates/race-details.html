@@ -5,7 +5,7 @@
     <title>Verseny részletei</title>
 </head>
 <body>
-
+<div th:replace="fragments :: menu"></div>
 <h1 th:text="'Verseny: ' + ${race.name}"></h1>
 <p>
     Táv: <span th:text="${race.distanceKm}"></span> km
