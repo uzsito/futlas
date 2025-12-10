@@ -1,5 +1,7 @@
 # Futóverseny Kezelő Alkalmazás
 
+![Előnézet](src/main/resources/static/peek.png)
+
 # "Futlas"
 
 Spring Boot alapú webalkalmazás, amely futók, versenyek és eredmények kezelését végzi.
@@ -11,5 +13,8 @@ Spring Boot alapú webalkalmazás, amely futók, versenyek és eredmények kezel
 - Thymeleaf
 - H2 adatbázis
 - Maven, Lombok
+
+## Használat
+Futtatás után a főmenü elérhető a localhost:8080-on.
 
 ### Neptun: S3251Z
