@@ -1,5 +1,7 @@
 # Futóverseny Kezelő Alkalmazás
 
+# "Futlas"
+
 Spring Boot alapú webalkalmazás, amely futók, versenyek és eredmények kezelését végzi.
 
 ## Technológiák
